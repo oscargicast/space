@@ -1,3 +1,8 @@
-from django.shortcuts import render
+from rest_framework import viewsets
+from .models import FieldWorker
+from .serializers import FieldWorkerSerializer
 
-# Create your views here.
+
+class FieldWorkerViewSet(viewsets.ModelViewSet):
+    queryset = FieldWorker.objects.all()
+    serializer_class = FieldWorkerSerializer
