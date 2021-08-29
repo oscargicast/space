@@ -23,6 +23,7 @@ DJANGO_APPS = [
 ]
 THIRD_PARTY_APPS = [
     "rest_framework",
+    "django_filters",
 ]
 LOCAL_APPS = [
     "field_worker",
@@ -123,5 +124,10 @@ REST_FRAMEWORK = {
     ],
     "DEFAULT_MODEL_SERIALIZER_CLASS": "rest_framework.serializers.HyperlinkedModelSerializer",
     "DEFAULT_PAGINATION_CLASS": "rest_framework.pagination.PageNumberPagination",
+    "DEFAULT_VERSIONING_CLASS": "rest_framework.versioning.NamespaceVersioning",
+    "DEFAULT_FILTER_BACKENDS": (
+        "django_filters.rest_framework.DjangoFilterBackend",
+        "django_filters.rest_framework.OrderingFilter",
+    ),
     "PAGE_SIZE": DRF_PAGE_SIZE,
 }
