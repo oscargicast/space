@@ -18,6 +18,7 @@ services:
 
   db:
     image: postgres:13.4-alpine 
+    restart: always
     ports:
       - "5432:5432"
     env_file:
@@ -43,8 +44,9 @@ services:
 
   db_test:
     image: postgres:13.4-alpine 
+    restart: always
     ports:
-      - "5432:5432"
+      - "5433:5432"
     environment:
       - POSTGRES_USER=postgres 
       - POSTGRES_PASSWORD=postgres 
