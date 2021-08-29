@@ -30,3 +30,11 @@ For example:
 docker-compose run --rm app python src/manage.py migrate
 docker-compose run --rm app python src/manage.py runserver
 ```
+
+# Run tests
+
+To execute the test run this command:
+
+```bash
+docker-compose run --rm app_test pytest
+```
