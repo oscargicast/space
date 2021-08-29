@@ -7,11 +7,13 @@
 # Local Development
 
 Copy the file .env.sample to .env and set you own env vars.
+
 ```bash
 cp .env.sample .env
 ```
 
-Start the dev server for local development:
+Start the dev server for [local development](http://localhost:8000/):
+
 ```bash
 docker-compose up
 ```
