@@ -28,7 +28,7 @@ For example:
 
 ```bash
 docker-compose run --rm app python src/manage.py migrate
-docker-compose run --rm app python src/manage.py runserver
+docker-compose run --rm --service-ports app python src/manage.py runserver 0.0.0.0:8000
 ```
 
 # Run tests
